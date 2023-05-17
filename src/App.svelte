@@ -1,8 +1,11 @@
 <script>
+  import { onMount } from 'svelte';
   import Card from './Card.svelte';
 
-  //let nombreCompleto = "Pepa Fuentes Martínez";
-let nombreCompleto = "Loli"
+  let nombreCompleto;
+  onMount(() => {
+
+  })
 </script>
 
 <style>
