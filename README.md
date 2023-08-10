@@ -1,47 +1,56 @@
-# Svelte + Vite
+# Carnet de Biblioteca - Svelte
 
-This template should help get you started developing with Svelte in Vite.
+Este es un proyecto de ejemplo que utiliza Svelte para crear un "Carnet de Biblioteca" virtual. Permite mostrar el nombre completo de una persona y generar nombres aleatorios si no se proporciona uno.
 
-## Recommended IDE Setup
+## Características
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+- Muestra el nombre random de una persona en un diseño de "carnet de biblioteca".
+- Si no se proporciona un nombre, obtiene nombres aleatorios de la API `random-data-api.com`.
 
-## Need an official Svelte framework?
+## Instrucciones de Uso
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+1. Clona este repositorio en tu computadora:
 
-## Technical considerations
+   ```sh
+   git clone https://github.com/Irina-Ichim/Carnet-De-Biblioteca-Con-Svelte.git
+   ```
 
-**Why use this over SvelteKit?**
+2. Navega a la carpeta del proyecto:
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+   ```sh
+   cd tu-repositorio
+   ```
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+3. Instala las dependencias utilizando npm:
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+   ```sh
+   npm install
+   ```
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+4. Ejecuta el servidor de desarrollo utilizando npm:
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+   ```sh
+   npm run dev
+   ```
 
-**Why include `.vscode/extensions.json`?**
+5. Abre tu navegador web y visita la dirección [http://localhost:8080](http://localhost:8080).
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+## Descripción del Proyecto
 
-**Why enable `checkJs` in the JS template?**
+Este proyecto utiliza Svelte, una biblioteca de JavaScript que se centra en la construcción de interfaces de usuario interactivas y reactivas. La aplicación consta de un componente de "Carnet de Biblioteca" que muestra el nombre random completo de una persona y genera nombres aleatorios utilizando la API `random-data-api.com` si no se proporciona un nombre. A continuación, se describen algunas partes clave del proyecto:
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+- La página principal utiliza estilos CSS para centrar el contenido y darle formato visual.
+- El componente `Card.svelte` es un componente reutilizable que muestra el nombre completo en un formato de "carnet de biblioteca".
+- La variable `nombreCompleto` se pasa al componente `Card` desde el componente principal.
+- Se utiliza el hook `onMount` para realizar acciones una vez que el componente ha sido montado en el DOM.
+- Si se proporciona un `nombreCompleto`, se divide en nombre y apellidos utilizando el método `.split` y se muestra en el componente.
+- Si no se proporciona un `nombreCompleto`, se realiza una solicitud a la API `random-data-api.com` para obtener nombres aleatorios y se muestran en el componente.
+- El componente principal también muestra los nombres separados y unidos utilizando las variables `firstName` y `lastName`.
 
-**Why is HMR not preserving my local component state?**
+## Capturas de Pantalla
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
+A continuación, se muestra cómo se ve la aplicación:
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+![Captura de Pantalla](/src/lib/Captura%20de%20pantalla%20(124).png)
 
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+## ¡Diviértete explorando tu proyecto! 😊📚

@@ -21,4 +21,6 @@ h1 {
   padding: 20px;
   background: linear-gradient(to bottom, #FF6B6B, #FF8E53);
   color: white;
+  height: 300px;
+  width: 300px;
 }

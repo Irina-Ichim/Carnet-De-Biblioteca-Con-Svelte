@@ -9,16 +9,7 @@
 </script>
 
 <style>
-  /*body {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }*/
+  
 
   h1 {
     font-size: 32px;
@@ -35,7 +26,7 @@
   }
 </style>
 
-<h1>IRINA</h1>
+<h1> Carnet de Biblioteca con IRINA</h1>
 
 <div class="card">
   <h3>Card Component</h3>
